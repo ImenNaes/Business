@@ -12,6 +12,7 @@ namespace Business.Models
         {
         }
         public DbSet<Payment> Payments { get; set; }
+        public DbSet<Product> Product { get; set; }
 
     }
 }
