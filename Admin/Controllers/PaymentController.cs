@@ -14,7 +14,7 @@ namespace Admin.Controllers
             //to bring data of payment table from webApi project
             HttpResponseMessage response = Helper.Helper.WebApiClient.GetAsync("Payment").Result;
             //To convert response to IEnumerable type 
-            paymentlist = response.Content.ReadAsAsync<IEnumerable<Payment>>().Result;
+                paymentlist = response.Content.ReadAsAsync<IEnumerable<Payment>>().Result;
             return View(paymentlist);
         }
 

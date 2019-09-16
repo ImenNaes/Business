@@ -19,5 +19,14 @@ namespace Business.Models
         [Required]
         //[Column(TypeName ="nvachar(100)")]
         public string BankName { get; set; }
+        
+        public PaymentStatus PaymentStatus { get; set; }
+      
+        public Guid PaymentDetailsID { get; set; }
+        [Required]
+        public IEnumerable<PaymentDetails> PaymentDetails { get; set; }
+        public Guid ProductID { get; set; }
+        [Required]
+        public IEnumerable<Product> Produtcs { get; set; }
     }
 }
